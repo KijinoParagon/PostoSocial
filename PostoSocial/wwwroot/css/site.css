@@ -1,0 +1,214 @@
+html {
+    background-color: darkolivegreen;
+    color: white;
+    height: 100%;
+    font-size: 1em;
+}
+
+body {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+/*
+============================
+========HEADER STYLES=======
+============================
+*/
+
+header {
+    background-color: rgb(64, 78, 40);
+    box-shadow: 0px 0px 10px black;
+    height: 10vh;
+    border-bottom: 1px solid rgb(147, 255, 105);
+}
+
+img#logo {
+    height: 75px;
+}
+
+svg#menuIcon {
+    height: 40px;
+    color: darkblue;
+}
+
+.headerTitle {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#buttonBar {
+    display: flex;
+}
+
+    #buttonBar * {
+        width: 80%;
+        height: 60%;
+        position: relative;
+        margin-right: 10px;
+        top: 20%;
+    }
+
+/*
+============================
+=========MAIN STYLES========
+============================
+*/
+
+aside {
+    box-shadow: 0px 5px 10px black;
+}
+
+.desktop, .sidebar {
+    display: none;
+}
+
+main {
+    height: 90vh;
+    margin: 0px;
+}
+
+    main > * {
+        height: 100%;
+    }
+
+aside {
+    background-color: rgba(0, 0, 0, 0.139);
+}
+
+
+/*
+============================
+=====LEFT SIDEBAR STYLES====
+============================
+*/
+
+@media (max-width: 800px) {
+    #leftSidebar {
+        position: absolute;
+        top: 10vh;
+        left: 0px;
+        width: 80vw;
+        height: 90vh;
+        overflow: auto;
+        background-color: rgb(72, 91, 40);
+    }
+}
+
+/*
+============================
+====RIGHT SIDEBAR STYLES====
+============================
+*/
+
+#rightSidebar {
+    height: 50%;
+    position: relative;
+    top: 10%;
+}
+
+/*
+============================
+====POST CONTAINER STYLES===
+============================
+*/
+
+#posts {
+    height: 100%;
+    overflow: auto;
+}
+
+/*
+============================
+=========POST STYLES========
+============================
+*/
+
+.post {
+    background-color: rgba(0, 0, 0, 0.146);
+    height: auto;
+    border-bottom: 1px solid rgb(147, 255, 105);
+    padding: 15px;
+}
+
+    .post:hover {
+        background-color: rgba(0, 0, 0, 0.049);
+    }
+
+.postTitle {
+    width: 100%;
+    font-size: 2em;
+}
+
+.postBody {
+    width: 95%;
+}
+
+.postGallery {
+    border-radius: 2em;
+    max-height: 20vh;
+    overflow: hidden;
+}
+
+    .postGallery img {
+        max-height: 20vh;
+        width: auto;
+        margin: auto;
+    }
+
+.postForum {
+    font-size: 1em;
+    height: 2em;
+}
+
+    .postForum span {
+        line-height: 2em;
+    }
+
+.forumIcon {
+    height: 100%;
+    ;
+}
+
+    .forumIcon img {
+        height: 100%;
+        border-radius: 1em;
+        border: 2px solid white;
+    }
+
+.postFooter {
+    height: 2em;
+}
+
+
+
+
+/*
+============================
+=======DESKTOP STYLES=======
+============================
+*/
+
+.forumReccomend:hover {
+    background-color: rgba(255, 255, 255, 0.193);
+}
+
+@media (min-width: 800px) {
+    #menuIcon {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop, .sidebar {
+        display: block;
+    }
+
+    #leftSidebar {
+        position: static;
+        height: 100%;
+    }
+}

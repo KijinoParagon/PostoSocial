@@ -1,0 +1,27 @@
+﻿@model Forum
+@{
+    ViewData["Title"] = Model.ForumName;
+}
+
+@try{
+    @foreach (Post p in ViewBag.Posts)
+    {
+        <div class="container-fluid post col-md-10 offset-md-1">
+            <div class="row postForum p-0">
+                <div class="p-0 m-0 col-1 forumIcon"><img class="" src="img/posto.png"></div>
+                <span class="p-0 m-0 col forumName">p/@p.Forum.ForumName + <span class="postTimeStamp">9 hours ago</span><span class="postUsername">by @p.User.UserName</span></span>
+            </div>
+            <div class="row postTitle">@p.PostTitle</div>
+            <div class="row postGallery bg-secondary"><img src="img/posto.png"></div>
+            <div class="row postBody">@p.PostBody</div>
+            <div class="row postFooter">
+                <div class="col-4 col-md-4 p-0 m-0"><span class="btn btn-primary">Comment</span></div>
+                <div class="col-4 col-md-4 p-0 m-0"><span class="btn btn-primary">Share</span></div>
+                <div class="col-4 col-md-4 p-0 m-0"><span class="btn btn-primary">Vote</span></div>
+            </div>
+        </div>
+    }
+}
+catch {
+    <br /><span>sorry. no posts, or there has been an error.</span>
+}
